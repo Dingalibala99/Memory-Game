@@ -1,0 +1,308 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #121212;
+  background-image: radial-gradient(circle at center, #181818 0%, #000 100%);
+}
+
+.info-stick-nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1em;
+  grid-column-gap: 1em;
+  color: #ccc;
+}
+
+#grid-size-selector {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  color: #ccc;
+  justify-content: center;
+}
+
+#grid-size-selector div {
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+}
+
+#grid {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#timer {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#turn-count {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+
+#completion-time,
+#timer {
+  color: black;
+  font-weight: bold;
+}
+
+.wrap {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.tri {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: anim infinite linear;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0) scale(0);
+  }
+
+  100% {
+    transform: rotate(360deg) translate3d(0, 0, 0) scale(1);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: transparent;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: repeat(3, 75px);
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  width: 75px;
+  height: 75px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card.flipped {
+  background-color: #fff;
+}
+
+.card.matched {
+  background-color: #88cc88;
+  cursor: default;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+  margin-top: 2em;
+}
+
+.card {
+  width: 75px;
+  height: 75px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.5s;
+  animation: spinAndColorChange 4s infinite linear;
+}
+
+.card.flipped {
+  background-color: #fff;
+  animation: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #0c192c;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.centered-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+#congratulations-message {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  font-weight: bold;
+}
+
+.congratulations-content {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#ok-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#new-game-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  justify-content: right;
+  align-items: right;
+}
+
+#new-game-button:hover {
+  background-color: #fff;
+  color: #f40303;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+#restart-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  justify-content: right;
+  align-items: right;
+}
+
+#restart-button:hover {
+  background-color: #fff;
+  color: #f40303;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Memory Game</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <nav class="info-stick-nav" id="grid-size-selector">
+      <label id="grid">Choose grid size</label>
+      <input type="radio" name="grid-size" id="grid-4x3" value="4x3" checked>
+      <label for="grid-4x3">Default</label>
+
+      <input type="radio" name="grid-size" id="grid-4x4" value="4x4">
+      <label for="grid-4x4">4x4</label>
+
+      <input type="radio" name="grid-size" id="grid-5x4" value="5x4">
+      <label for="grid-5x4">5x4</label>
+
+      <div id="timer">00:00:00</div>
+      <div id="turn-count">Turn-Count: 0</div>
+    </nav>
+
+    <div class="centered-content">
+      <div class="wrap">
+        <div class="title">Click a tile and then try to match it</div>
+        <div class="start-game">
+          <button id="new-game-button">Start New Game</button>
+        </div>
+        <div class="restart-game">
+          <button id="restart-button">Restart Game</button>
+        </div>
+        <div id="board"></div>
+        <div id="congratulations-message">
+          <div class="congratulations-content">
+            <h2 id="completion-time">Congratulations! You've completed the game.</h2>
+            <button id="ok-button">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bubbles">
+      <script src="./src/bubbles.js"></script>
+    </div>
+  </div>
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>

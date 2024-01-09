@@ -1,0 +1,27 @@
+{
+  "name": "makadunyiswe-dingalibala-222-memory-game-in-vanilla-js-javascript",
+  "version": "1.0.0",
+  "description": "Memory game web app (222)\r For raw project instructions see: http://syllabus.africacode.net/projects/memory-game/part-1/",
+  "main": "./src/gameWeb",
+  "scripts": {
+    "test": "jasmine",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umuzi-org/Makadunyiswe-Dingalibala-222-memory-game-in-vanilla-js-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Umuzi-org/Makadunyiswe-Dingalibala-222-memory-game-in-vanilla-js-javascript/issues"
+  },
+  "homepage": "https://github.com/Umuzi-org/Makadunyiswe-Dingalibala-222-memory-game-in-vanilla-js-javascript#readme",
+  "devDependencies": {
+    "jasmine": "^5.1.0",
+    "jsdom": "^22.1.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
